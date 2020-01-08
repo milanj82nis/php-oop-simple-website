@@ -99,17 +99,12 @@ class User extends DbConnect {
 	
 	
 
-
-	
-	
-	
-	
 	public function userLogin( $email , $password ){
 		
 		if( $this -> checkIsLoginFormEmpty( $email , $password )){
 			
 			
-			$sql = 'select password from users where email = ? limit 1 ';
+			$sql = 'select * from users where email = ? limit 1 ';
 			
 			$query = $this -> connect() -> prepare( $sql );
 			
@@ -118,29 +113,30 @@ class User extends DbConnect {
 			$results = $query -> fetchAll();
 			
 			
+			
 			if ( count ( $results ) > 0 ) {
 				
 				foreach( $results as $result ){
 					
 					$hashedPassword = $result['password'];
 				
+						
 					if( password_verify( $password , $hashedPassword )){
+	
 						
-
-						
-						
-						$_SESSION['logged']= 1;
+						$_SESSION['logged'] = 1;
+						$_SESSION['user_id']= $result['id'];
+						$_SESSION['email'] = $result['email'];
 						
 						if (headers_sent()) {
 							
-								die('You are successfully loged in.Please click on link to go on home page. <a href="index.php">Home</a>'  );
+						die('You are successfully loged in.Please click on link to go on home page. <a href="index.php">Home page</a>'  );
 		}
 		else{
 			exit(header("Location: /index.php"));
 		}
 
-						
-						exit();
+				exit();
 						
 					} else {
 						
@@ -148,23 +144,11 @@ class User extends DbConnect {
 					}
 					
 				}
-				
-				
-				
-				
-				
-				
-				
-				
+							
 			} else{
 				
 				$this -> setMessage( 'You entered wrong email or password.Try again.');
 			}
-			
-			
-			
-			
-			
 			
 		} else {
 			
@@ -174,7 +158,11 @@ class User extends DbConnect {
 		
 	}// userLogin
 	
-	
+	public function logout() { 
+       $_SESSION = array();
+       session_destroy();
+		header('Location:index.php');
+   }
 	
 	
 	

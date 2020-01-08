@@ -20,18 +20,62 @@
         <li><a href="forum.php">Forum</a></li>
         <li><a href="store.php">Store</a></li>
         <li ><a href="contact.php">Contact </a></li>
-        <li class="dropdown">
+		  
+		  <?php 
+		  if ( isset($_SESSION['logged'])){
+			 ?> 
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome , Guest <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="dashboard.php">My Dashboard</a></li>
+            <li><a href="messages.php">Messages</a></li>
+            <li><a href="change-account.php">Change account</a></li>
+            <li class="divider"></li>
+            <li><a href="#">khác</a></li>
+            <li class="divider"></li>
+			  
+			  <?php
+
+			  $user = new User();
+			  
+			  if (isset($_POST['logout']) ) {
+				  
+   				echo  $user->logout();
+}
+?>
+			  
+            <li><form method="post"><button type="submit" class="btn btn-circle" name="logout">Logout</button></form></li>
+          </ul>
+        </li>   
+
+			  
+			 <?php 
+		  } else {
+			  
+			  
+			  
+			 ?> 
+			          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome , Guest <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
-            <li><a href="passwor-reset.php">Password reset</a></li>
+            <li><a href="password-reset.php">Password reset</a></li>
             <li class="divider"></li>
             <li><a href="#">khác</a></li>
             <li class="divider"></li>
             <li><a href="#">Chắc một cái gì đó sẽ nằm ở đây thôi :))</a></li>
           </ul>
         </li>   
+
+			  
+			 <?php  
+			  
+		  }
+		  
+		  
+		  
+		  ?>
          <form class="navbar-form navbar-right hidden-sm hidden-md hidden-xs" role="search" action="/" method="GET">
       <div class="input-group">
       <input type="text" class="form-control" placeholder="Tìm kiếm..."/>
