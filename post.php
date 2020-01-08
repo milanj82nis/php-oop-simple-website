@@ -106,26 +106,7 @@ require_once 'include/class_autoloder.inc.php';
         </div>
 		 
 		 
-		 <?php 
-		 
-		 $posts = new Blog;
-		 
-		 foreach ( $posts -> getAllPosts() as $post ){
-			 ?>
-			                 <div class="col-md-10 blogShort">
-                     <h1><?php echo $post['title'] ?></h1>
-                     <img src="<?php echo $post['featured_image'] ?>" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
-                     
-                         <em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>
-                     <article><p>
-                         <?php echo $post['excerpt'] ?>
-                         </p></article>
-                     <a class="btn btn-blog pull-right marginBottom10" href="post.php?id=<?php echo $post['id'] ?>">READ MORE</a> 
-                 </div>
- 
-			 
-<?php		 }
-		 ?>
+	
                
 		 
                <div class="col-md-12 gap10"></div>

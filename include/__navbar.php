@@ -78,9 +78,9 @@
 		  ?>
          <form class="navbar-form navbar-right hidden-sm hidden-md hidden-xs" role="search" action="/" method="GET">
       <div class="input-group">
-      <input type="text" class="form-control" placeholder="Tìm kiếm..."/>
+      <input type="text" class="form-control" placeholder="Enter search keywords....."/>
       <span class="input-group-btn">
-        <button class="btn btn-success" type="button">Tìm kiếm</button>
+        <button class="btn btn-success" type="button">Search</button>
       </span>
       </form>
       </ul> 
