@@ -2,7 +2,10 @@
 
 require_once 'include/db.inc.php';
 require_once 'include/class_autoloder.inc.php';
-
+if( isset($_SESSION['logged'])){
+	
+	header('Location:index.php');
+}
 ?>
 <!doctype html>
 <html lang="en">

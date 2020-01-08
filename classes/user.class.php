@@ -85,6 +85,106 @@ class User extends DbConnect {
 		}
 		
 	}// userRegistration
+	protected function checkIsLoginFormEmpty( $email , $password ){
+		
+		if( !empty( $email) && !empty( $password)){
+			
+			return true;
+		} else {
+			
+			return false;
+		}
+		
+	}// checkIsLoginFormEmpty
+	
+	
+
+
+	
+	
+	
+	
+	public function userLogin( $email , $password ){
+		
+		if( $this -> checkIsLoginFormEmpty( $email , $password )){
+			
+			
+			$sql = 'select password from users where email = ? limit 1 ';
+			
+			$query = $this -> connect() -> prepare( $sql );
+			
+			$query -> execute([ $email ]);
+			
+			$results = $query -> fetchAll();
+			
+			
+			if ( count ( $results ) > 0 ) {
+				
+				foreach( $results as $result ){
+					
+					$hashedPassword = $result['password'];
+				
+					if( password_verify( $password , $hashedPassword )){
+						
+
+						
+						
+						$_SESSION['logged']= 1;
+						
+						if (headers_sent()) {
+							
+								die('You are successfully loged in.Please click on link to go on home page. <a href="index.php">Home</a>'  );
+		}
+		else{
+			exit(header("Location: /index.php"));
+		}
+
+						
+						exit();
+						
+					} else {
+						
+						$this-> setMessage('You entered wrong password or email');
+					}
+					
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+			} else{
+				
+				$this -> setMessage( 'You entered wrong email or password.Try again.');
+			}
+			
+			
+			
+			
+			
+			
+		} else {
+			
+			$this -> setMessage('Please , Fill all fields in form.');
+		}
+		
+		
+	}// userLogin
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }// User

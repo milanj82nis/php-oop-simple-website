@@ -2,12 +2,15 @@
 
 require_once 'include/db.inc.php';
 require_once 'include/class_autoloder.inc.php';
-
+if( isset($_SESSION['logged'])){
+	
+	header('Location:index.php');
+}
 ?>
 <!doctype html>
 <html lang="en">
   <head>
-       <?php require_once 'include/__head.php'; ?>	  
+      <?php require_once 'include/__head.php'; ?>	  
 
   </head>
   <body>
@@ -26,37 +29,59 @@ require_once 'include/class_autoloder.inc.php';
 	 <div class="row">
 		 
 		 
- <?php require_once 'include/__navbar.php'; ?>	  
-</div> <!-- ROW -->
+ <?php require_once 'include/__navbar.php'; ?></div> <!-- ROW -->
 	
 
 	   <div class="row">
 		 
 		 
-		 
-		 <div class="col-md-5">
-    <div class="form-area">  
-        <form role="form">
+	
+		 <div class="col-md-6">
+    <div class="form-area"> 
+		<?php
+		try {
+			
+
+
+			if( isset( $_POST['login'])){
+					$user = new User;	
+					
+					$password = $_POST['password'];
+					$email = $_POST['email'];
+					
+					echo $user -> userLogin( $email , $password );
+				
+			}
+		
+			
+			
+			
+		} catch( Exception $e ){
+			
+			echo $e -> getMessage();
+		}
+		
+		
+		?>
+		
+		
+		
+        <form role="form" method="POST" action="login.php">
         <br style="clear:both">
-                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
-    				<div class="form-group">
-						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                    <h3 style="margin-bottom: 25px; text-align: center;">Login form</h3>
+    				
+			
+					<div class="form-group">
+						<input type="email" class="form-control"  name="email" placeholder="Email" >
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+						<input type="password" class="form-control"  name="password" placeholder="Password" >
 					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-					</div>
-                    <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
-                    </div>
-            
-        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+					
+			
+
+			
+        <button type="submit" name="login" class="btn btn-primary pull-right">Login</button>
         </form>
     </div>
 </div>
