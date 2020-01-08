@@ -47,28 +47,71 @@ require_once 'include/class_autoloder.inc.php';
 		 
 		 
 		 
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
-		 
-		 <br><br><br><br><br><br>
+		<h1>Et quidem iure fortasse, sed tamen non gravissimum est testimonium multitudinis.</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis est, qui non oderit libidinosam, protervam adolescentiam? In his igitur partibus duabus nihil erat, quod Zeno commutare gestiret. Ut in voluptate sit, qui epuletur, in dolore, qui torqueatur. Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit oblitus es. <i>Recte, inquit, intellegis.</i> Et homini, qui ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus? Duo Reges: constructio interrete. <i>Paria sunt igitur.</i> </p>
+
+<p><a href="http://loripsum.net/" target="_blank">Maximus dolor, inquit, brevis est.</a> Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; </p>
+
+<ol>
+	<li>Moriatur, inquit.</li>
+	<li>Sapiens autem semper beatus est et est aliquando in dolore;</li>
+	<li>Memini me adesse P.</li>
+	<li>Nam illud vehementer repugnat, eundem beatum esse et multis malis oppressum.</li>
+	<li>Ut scias me intellegere, primum idem esse dico voluptatem, quod ille don.</li>
+	<li>Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas?</li>
+</ol>
+
+
+<pre>Quid enim mihi potest esse optatius quam cum Catone, omnium
+virtutum auctore, de virtutibus disputare?
+
+Quod vestri quidem vel optime disputant, nihil opus esse
+eum, qui philosophus futurus sit, scire litteras.
+</pre>
+
+
+<p>Itaque hic ipse iam pridem est reiectus; <i>Ostendit pedes et pectus.</i> Quae fere omnia appellantur uno ingenii nomine, easque virtutes qui habent, ingeniosi vocantur. <a href="http://loripsum.net/" target="_blank">Quis istum dolorem timet?</a> Tanti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Dat enim intervalla et relaxat. Quo studio Aristophanem putamus aetatem in litteris duxisse? Ita graviter et severe voluptatem secrevit a bono. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. </p>
+
+<h2>Quicquid porro animo cernimus, id omne oritur a sensibus;</h2>
+
+<p>Graecis hoc modicum est: Leonidas, Epaminondas, tres aliqui aut quattuor; Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Equidem soleo etiam quod uno Graeci, si aliter non possum, idem pluribus verbis exponere. Omnis enim est natura diligens sui. Plane idem, inquit, et maxima quidem, qua fieri nulla maior potest. </p>
+
+<h3>Quae est igitur causa istarum angustiarum?</h3>
+
+<p>Tum Quintus: Est plane, Piso, ut dicis, inquit. Idemque diviserunt naturam hominis in animum et corpus. <i>Nosti, credo, illud: Nemo pius est, qui pietatem-;</i> Quid enim tanto opus est instrumento in optimis artibus comparandis? <mark>Immo videri fortasse.</mark> Quid est igitur, cur ita semper deum appellet Epicurus beatum et aeternum? Non pugnem cum homine, cur tantum habeat in natura boni; Isto modo ne improbos quidem, si essent boni viri. </p>
+
+<dl>
+	<dt><dfn>Quis enim redargueret?</dfn></dt>
+	<dd>An tu me de L.</dd>
+	<dt><dfn>An eiusdem modi?</dfn></dt>
+	<dd>Praetereo multos, in bis doctum hominem et suavem, Hieronymum, quem iam cur Peripateticum appellem nescio.</dd>
+	<dt><dfn>Easdemne res?</dfn></dt>
+	<dd>Iam contemni non poteris.</dd>
+	<dt><dfn>Proclivi currit oratio.</dfn></dt>
+	<dd>Homines optimi non intellegunt totam rationem everti, si ita res se habeat.</dd>
+	<dt><dfn>Equidem e Cn.</dfn></dt>
+	<dd>Si mala non sunt, iacet omnis ratio Peripateticorum.</dd>
+	<dt><dfn>Cur iustitia laudatur?</dfn></dt>
+	<dd>Vitae autem degendae ratio maxime quidem illis placuit quieta.</dd>
+</dl>
+
+
+<blockquote cite="http://loripsum.net">
+	Istud quidem, inquam, optime dicis, sed quaero nonne tibi faciendum idem sit nihil dicenti bonum, quod non rectum honestumque sit, reliquarum rerum discrimen omne tollenti.
+</blockquote>
+
+
+<ul>
+	<li>Animum autem reliquis rebus ita perfecit, ut corpus;</li>
+	<li>Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius.</li>
+	<li>Itaque vides, quo modo loquantur, nova verba fingunt, deserunt usitata.</li>
+	<li>Ait enim se, si uratur, Quam hoc suave! dicturum.</li>
+	<li>Praeclarae mortes sunt imperatoriae;</li>
+</ul>
+
+
+
 		 
 		 </div>
 	   
