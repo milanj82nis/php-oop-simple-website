@@ -25,7 +25,7 @@
 		  if ( isset($_SESSION['logged'])){
 			 ?> 
 		<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome , Guest <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome , <?php echo $_SESSION['name'] ;?> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="dashboard.php">My Dashboard</a></li>
             <li><a href="messages.php">Messages</a></li>

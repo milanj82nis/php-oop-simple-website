@@ -122,19 +122,24 @@ class User extends DbConnect {
 				
 						
 					if( password_verify( $password , $hashedPassword )){
-	
 						
 						$_SESSION['logged'] = 1;
+						
 						$_SESSION['user_id']= $result['id'];
+						
 						$_SESSION['email'] = $result['email'];
+						
+						$_SESSION['name'] = $result['name'];	
 						
 						if (headers_sent()) {
 							
-						die('You are successfully loged in.Please click on link to go on home page. <a href="index.php">Home page</a>'  );
-		}
-		else{
-			exit(header("Location: /index.php"));
-		}
+							die('You are successfully loged in.Please click on link to go on home page. <a href="index.php">Home page</a>'  );
+						}
+						
+						else{
+							
+							exit(header("Location: /index.php"));
+						}
 
 				exit();
 						
